@@ -32,6 +32,18 @@ export async function generateMetadata({
   }
 }
 
+// SSG
+export async function generateStaticParams() {
+  const response = await api('/products/featured')
+  const products: Product[] = await response.json()
+
+  return products.map((product) => {
+    return {
+      slug: product.slug,
+    }
+  })
+}
+
 export default async function ProductPage({ params }: ProductProps) {
   const product = await getProduct(params.slug)
 
