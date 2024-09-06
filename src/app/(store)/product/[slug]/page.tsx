@@ -10,7 +10,12 @@ interface ProductProps {
   }
 }
 
-// Memoization in getProduct() => A chamada é feita em várias partes desse componente então o react trata de a memorizar e só chamar uma única vez passando o seu resultado para todas as partes que precisem dele
+/*
+ * Memoization (SSR)
+ * Se fizermos a mesma requisição mais de uma vez dentro de um SSR,
+ * o react trata de memorizar a primeira chamada e só executar ela uma única vez,
+ * passando o seu resultado para as outras partes que precisam dela
+ */
 
 async function getProduct(slug: string): Promise<Product> {
   const response = await api(`/products/${slug}`, {
