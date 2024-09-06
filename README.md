@@ -4,10 +4,11 @@ Simple e-commerce project to practice the new features of the new version of Nex
 
 <h1 align="center">
   <img alt="Print Screen" src=".github/print-1.png" />
+  <img alt="Print Screen" src=".github/print-2.png" />
 </h1>
 
 <h1 align="center">
-  <img alt="Print Screen" src=".github/print-2.png" />
+  
 </h1>
 
 
